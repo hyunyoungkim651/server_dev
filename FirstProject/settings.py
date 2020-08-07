@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,8 +25,12 @@ SECRET_KEY = 'eut&56d@b$!b!$k7a1y+93@m6kfun$pk3l$x7cqn5j)azw@bdb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['ec2-15-164-215-102.ap-northeast-2.compute.amazonaws.com', '15.164.215.102']
 
+TIME_ZONE = 'Asia/Seoul'
+# 생략 ...
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Application definition
 
